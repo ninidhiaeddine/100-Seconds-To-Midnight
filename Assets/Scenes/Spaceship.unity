@@ -140,9 +140,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2088cff879b4ca4fb0387bd15d2d32c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strafeForce: 0
+  strafeForce: 50
   thrustForce: 1000
-  hoverForce: 0
+  hoverForce: 500
 --- !u!54 &107430362
 Rigidbody:
   m_ObjectHideFlags: 0

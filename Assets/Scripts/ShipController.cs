@@ -9,6 +9,8 @@ public class ShipController : MonoBehaviour
     private float dx;
     private float dy;
     private float dz;
+    private float mouseX;
+    private flota mouseY;
 
     // components:
     Rigidbody rb;
@@ -32,21 +34,47 @@ public class ShipController : MonoBehaviour
     void GetInput()
     {
         dx = Input.GetAxisRaw("Horizontal");
-        dy = Input.GetAxisRaw("Vertical");
-        //dz = Input.GetAxisRaw("Hover");
+        dy = Input.GetAxisRaw("Hover");
+        dz = Input.GetAxisRaw("Vertical");
     }
 
     void HandleMovement()
     {
         HandleThrust();
-        
+        //HandleStrafe();
+        //HandlePitch();
+        HandleHover();
+    }
+
+    void HandleStrafe()
+    {
+        if (Mathf.Abs(dx) > 0.1f)
+        {
+            rb.AddRelativeForce(Vector3.right * strafeForce * dx * Time.deltaTime);
+        }
+    }
+
+    void HandlePitch()
+    {
+        if (Mathf.Abs(dx) > 0.1f)
+        {
+            rb.AddRelativeTorque(Vector3.back * strafeForce * dx * Time.deltaTime);
+        }
+    }
+
+    void HandleHover()
+    {
+        if (Mathf.Abs(dy) > 0.1f)
+        {
+            rb.AddRelativeForce(Vector3.up * hoverForce * dy * Time.deltaTime);
+        }
     }
 
     void HandleThrust()
     {
-        if (Mathf.Abs(dy) > 0.1f)
+        if (Mathf.Abs(dz) > 0.1f)
         {
-            rb.AddRelativeForce(Vector3.forward * thrustForce * dy * Time.deltaTime);
+            rb.AddRelativeForce(Vector3.forward * thrustForce * dz * Time.deltaTime);
         }
     }
 }
