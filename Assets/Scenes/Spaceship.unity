@@ -610,7 +610,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 107430361, guid: 44701dc97fe3ed848bcfa06a459eb1c6, type: 3}
       propertyPath: hoverForce
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 107430361, guid: 44701dc97fe3ed848bcfa06a459eb1c6, type: 3}
       propertyPath: pitchForce

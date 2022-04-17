@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -28,11 +25,6 @@ public class ShipController : MonoBehaviour
 
     // components:
     Rigidbody rb;
-
-    // helper variables:
-    private float thrustGlide = 0.0f;
-    private float hoverGlide = 0.0f;
-    private float strafeGlide = 0.0f;
 
     void Start()
     {
@@ -69,39 +61,29 @@ public class ShipController : MonoBehaviour
     {
         if (Mathf.Abs(hoverInput) > 0.1f)
         {
-            hoverGlide = hoverForce * hoverInput;
+            rb.AddRelativeForce(Vector3.up * hoverForce * hoverInput * Time.deltaTime);
         }
-        else
-        {
-            hoverGlide *= hoverGlideReduction;
-        }
-        rb.AddRelativeForce(Vector3.up * hoverGlide * Time.deltaTime);
     }
 
     void HandleThrust()
     {
         if (Mathf.Abs(thrustInput) > 0.1f)
         {
-            thrustGlide = thrustForce * thrustInput;
+            rb.AddRelativeForce(Vector3.forward * thrustForce * thrustInput * Time.deltaTime);
         }
-        else
-        {
-            thrustGlide *= thrustGlideReduction;
-        }
-        rb.AddRelativeForce(Vector3.forward * thrustGlide * Time.deltaTime);
     }
 
     void HandleStrafe()
     {
         if (Mathf.Abs(strafeInput) > 0.1f)
         {
-            strafeGlide = Mathf.Clamp(Mathf.Abs(hoverGlide), 0.0f, 1.0f) * strafeInput * strafeForce;
+            rb.AddRelativeForce(
+                Vector3.right 
+                * Mathf.Abs(hoverInput)
+                * strafeInput 
+                * strafeForce 
+                * Time.deltaTime);
         }
-        else
-        {
-            strafeGlide *= strafeGlideReduction;
-        }
-        rb.AddRelativeForce(Vector3.right * strafeGlide * Time.deltaTime);
     }
 
     void HandlePitch()
@@ -110,9 +92,9 @@ public class ShipController : MonoBehaviour
         {
             rb.AddRelativeTorque(
                 Vector3.left 
-                * Mathf.Clamp(pitchInput, -1f, 1f) 
+                * Mathf.Clamp(pitchInput, -1.0f, 1.0f) 
                 * pitchForce 
-                * Mathf.Clamp(Mathf.Abs(thrustGlide), 0.0f, 1.0f) 
+                * Mathf.Abs(thrustInput)
                 * Time.deltaTime
                 );
         }
@@ -124,9 +106,9 @@ public class ShipController : MonoBehaviour
         {
             rb.AddRelativeTorque(
                 Vector3.up 
-                * Mathf.Clamp(yawInput, -1f, 1f) 
+                * Mathf.Clamp(yawInput, -1.0f, 1.0f) 
                 * pitchForce 
-                * Mathf.Clamp(Mathf.Abs(thrustGlide), 0.0f, 1.0f) 
+                * Mathf.Abs(thrustInput) 
                 * Time.deltaTime
                 );
         }
@@ -141,7 +123,7 @@ public class ShipController : MonoBehaviour
                 Vector3.back 
                 * rollInput 
                 * rollTorque 
-                * Mathf.Clamp(Mathf.Abs(thrustGlide), 0.0f, 1.0f)
+                * Mathf.Abs(thrustInput)
                 * Time.deltaTime
                 );
         }
