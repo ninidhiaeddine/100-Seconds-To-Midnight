@@ -10,11 +10,6 @@ public class ShipController : MonoBehaviour
     [SerializeField] private float pitchForce;
     [SerializeField] private float rollTorque;
 
-    [Header("Reduction Parameters")]
-    [SerializeField] [Range(0.01f, 0.99f)] private float thrustGlideReduction = 0.1f;
-    [SerializeField] [Range(0.01f, 0.99f)] private float hoverGlideReduction = 0.1f;
-    [SerializeField] [Range(0.01f, 0.99f)] private float strafeGlideReduction = 0.1f;
-
     // input values:
     private float strafeInput;
     private float thrustInput;
