@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a11a028bbceeb845913b2e931dd1b9e, type: 3}
+  m_Name: Dialog
+  m_EditorClassIdentifier: 
+  character1LinesDurationPairs:
+  - line: Hey Cyrine
+    duration: 2
+  - line: Hru doing hanounti?
+    duration: 2
+  - line: Hhhhhhh lala ramy dyeli we7di
+    duration: 2
+  - line: Hanounti ana nro7 l Dubai nensak
+    duration: 2
+  - line: Khemmi 3la tizek
+    duration: 2
+  character2LinesDurationPairs:
+  - line: Hey Rafik
+    duration: 2
+  - line: Hawji ana hanountek nghbik
+    duration: 2
+  - line: I thought im the one disappearing after graudation. Turna out it's you
+      bitch
+    duration: 2
+  startWith: 0
