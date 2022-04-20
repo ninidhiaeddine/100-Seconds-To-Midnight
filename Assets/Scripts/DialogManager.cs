@@ -8,6 +8,7 @@ public class DialogManager : MonoBehaviour
 
     // dialog:
     public DialogScriptableObject dialog;
+    public DialogTextTyper dialogTextTyper;
 
     void Awake()
     {
@@ -29,12 +30,30 @@ public class DialogManager : MonoBehaviour
     public IEnumerator StartDialog()
     {
         DialogLineDurationPair[] interleavedDialogLines;
+        string characterName;
+
         if (dialog.startWith == Character.Character1)
         {
             interleavedDialogLines = InterleaveArrays<DialogLineDurationPair>(
                 dialog.character1LinesDurationPairs, 
                 dialog.character2LinesDurationPairs
                 );
+
+            for (int i = 0; i < interleavedDialogLines.Length; i++)
+            {
+                // find character name:
+                if (i % 2 == 0)
+                    characterName = dialog.character1Name;
+                else
+                    characterName = dialog.character2Name;
+
+                // set full text:
+                dialogTextTyper.fullText = characterName + ": " + interleavedDialogLines[i].line;
+
+                // call typer:
+                StartCoroutine(dialogTextTyper.TypeText());
+                yield return new WaitForSeconds(interleavedDialogLines[i].duration);
+            }
         }
         else
         {
@@ -42,12 +61,24 @@ public class DialogManager : MonoBehaviour
                 dialog.character2LinesDurationPairs,
                 dialog.character1LinesDurationPairs
                 );
-        }
 
-        for (int i = 0; i < interleavedDialogLines.Length; i++)
-        {
-            Debug.Log(interleavedDialogLines[i].line);
-            yield return new WaitForSeconds(interleavedDialogLines[i].duration);
+            for (int i = 0; i < interleavedDialogLines.Length; i++)
+            {
+                // find character name:
+                if (i % 2 == 0)
+                    characterName = dialog.character2Name;
+                else
+                    characterName = dialog.character1Name;
+
+                // set full text:
+                dialogTextTyper.fullText = characterName + ": " + interleavedDialogLines[i].line;
+
+                // call typer:
+                StartCoroutine(dialogTextTyper.TypeText());
+                yield return new WaitForSeconds(interleavedDialogLines[i].duration);
+            }
+
+            // TODO: Fix appending character's name when the two arrays are not the same size
         }
     }
 
