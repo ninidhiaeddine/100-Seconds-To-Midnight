@@ -13,15 +13,22 @@ MonoBehaviour:
   m_Name: Dialog
   m_EditorClassIdentifier: 
   character1LinesDurationPairs:
-  - line: Hey how are you
-    duration: 5
-  - line: I'm good
-    duration: 3
-  - line: 
-    duration: 0
-  - line: 
-    duration: 0
-  - line: 
-    duration: 0
-  character2LinesDurationPairs: []
+  - line: Hey Cyrine
+    duration: 2
+  - line: Hru doing hanounti?
+    duration: 2
+  - line: Hhhhhhh lala ramy dyeli we7di
+    duration: 2
+  - line: Hanounti ana nro7 l Dubai nensak
+    duration: 2
+  - line: Khemmi 3la tizek
+    duration: 2
+  character2LinesDurationPairs:
+  - line: Hey Rafik
+    duration: 2
+  - line: Hawji ana hanountek nghbik
+    duration: 2
+  - line: I thought im the one disappearing after graudation. Turna out it's you
+      bitch
+    duration: 2
   startWith: 0
