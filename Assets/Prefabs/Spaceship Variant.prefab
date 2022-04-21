@@ -455,6 +455,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spaceship
       objectReference: {fileID: 0}
+    - target: {fileID: 3368916564331560363, guid: b3c0a61dfe701344d819eb701e83f4b7, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 9144030251778499809, guid: b3c0a61dfe701344d819eb701e83f4b7, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -504,20 +508,6 @@ MonoBehaviour:
   hoverForce: 200
   pitchForce: 30
   rollTorque: 10
---- !u!114 &6527579763047463752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 939362748432085931}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76068a7af74447b49a5e11966799807f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  printSpeed: 1
-  speedFactor: 10
 --- !u!114 &805219325922790486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,4 +524,18 @@ MonoBehaviour:
   shootingPoints:
   - {fileID: 1801724464}
   - {fileID: 2133279202}
-  shootingForce: 20
+  shootingForce: 3000
+--- !u!114 &6527579763047463752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939362748432085931}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76068a7af74447b49a5e11966799807f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  printSpeed: 1
+  speedFactor: 10

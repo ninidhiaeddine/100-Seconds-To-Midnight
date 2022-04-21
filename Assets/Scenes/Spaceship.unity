@@ -1174,10 +1174,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 805219325922790486, guid: 44701dc97fe3ed848bcfa06a459eb1c6, type: 3}
-      propertyPath: shootingForce
-      value: 3000
-      objectReference: {fileID: 0}
     - target: {fileID: 939362748432085931, guid: 44701dc97fe3ed848bcfa06a459eb1c6, type: 3}
       propertyPath: m_Name
       value: Spaceship

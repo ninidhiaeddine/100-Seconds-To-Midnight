@@ -1,16 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShipShooter : MonoBehaviour
 {
     public GameObject rocketPrefab;
     public Transform[] shootingPoints;
-    public float shootingForce;
+    [Range(100.0f, 5000.0f)]
+    public float shootingForce = 3000.0f;
 
-    private void Awake()
+    void Awake()
     {
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     void Update()
@@ -37,6 +36,8 @@ public class ShipShooter : MonoBehaviour
         Rigidbody rb = rocket.GetComponent<Rigidbody>();
         rb.AddForce(transform.forward * shootingForce, ForceMode.Acceleration);
     }
+
+    // helper function:
 
     Vector3 PickRandomShootingPosition()
     {
