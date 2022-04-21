@@ -12,23 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a11a028bbceeb845913b2e931dd1b9e, type: 3}
   m_Name: Dialog
   m_EditorClassIdentifier: 
+  character1Name: Hannoushati
+  character2Name: Cyrine
   character1LinesDurationPairs:
   - line: Hey Cyrine
     duration: 2
   - line: Hru doing hanounti?
     duration: 2
   - line: Hhhhhhh lala ramy dyeli we7di
-    duration: 2
+    duration: 3
   - line: Hanounti ana nro7 l Dubai nensak
-    duration: 2
+    duration: 4
   - line: Khemmi 3la tizek
     duration: 2
   character2LinesDurationPairs:
   - line: Hey Rafik
     duration: 2
   - line: Hawji ana hanountek nghbik
-    duration: 2
-  - line: I thought im the one disappearing after graudation. Turna out it's you
+    duration: 3
+  - line: I thought im the one disappearing after graudation. Turns out it's you
       bitch
-    duration: 2
+    duration: 4
   startWith: 0
