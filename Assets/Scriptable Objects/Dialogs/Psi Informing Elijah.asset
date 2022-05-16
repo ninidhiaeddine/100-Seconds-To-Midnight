@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a11a028bbceeb845913b2e931dd1b9e, type: 3}
+  m_Name: Psi Informing Elijah
+  m_EditorClassIdentifier: 
+  dialogClip: {fileID: 8300000, guid: 66eaa6ba38bf2bb498110b99c10e4ed0, type: 3}
+  character1Name: Anakin
+  character2Name: Elijah
+  character1LinesDurationPairs:
+  - line: 'Hello Captain Miller, this is agent Anakin speaking. I am calling you
+      to inform you of something highly discrete, and must not be shared with anyone. '
+    duration: 11
+  - line: 'The feared has finally arrived, Andromeda is soon to impact our galaxy,
+      and it will mostly affect Earth. Humankind is on its verge. There is no hope
+      to save humanity, and as such, no one shall be informed in order to avoid mass
+      hysteria. You are ordered to keep this information to yourself and do not do
+      anything about it. '
+    duration: 26
+  character2LinesDurationPairs:
+  - line: Hello agent Anakin, what is it that you want to inform me of?
+    duration: 4
+  - line: "Uh\u2026n-noted. Thanks for letting me know agent Anakin. Thanks\u2026Bye\u2026"
+    duration: 6
+  startWith: 0

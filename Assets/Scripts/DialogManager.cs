@@ -3,6 +3,9 @@ using System.Collections;
 
 public class DialogManager : MonoBehaviour
 {
+    // component:
+    private AudioSource audioSource;
+
     // singleton:
     public static DialogManager Instance { get; private set; }
 
@@ -22,12 +25,35 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    void Start()
     {
-        StartCoroutine(StartDialog());
+        audioSource = GetComponent<AudioSource>();
+
+        // just for testing:
+        StartDialog();
     }
 
-    public IEnumerator StartDialog()
+    // public functions:
+
+    public void SetNewDialog(DialogScriptableObject newDialog)
+    {
+        this.dialog = newDialog;
+        UpdateDialogClip();
+    }
+
+    public void StartDialog()
+    {
+        // start text dialog:
+        StartCoroutine(StartDialogCoroutine());
+
+        // play dialog clip:
+        UpdateDialogClip();
+        audioSource.Play();
+    }
+
+    // helper functions:
+
+    private IEnumerator StartDialogCoroutine()
     {
         DialogLineDurationPair[] interleavedDialogLines;
         string characterName;
@@ -35,7 +61,7 @@ public class DialogManager : MonoBehaviour
         if (dialog.startWith == Character.Character1)
         {
             interleavedDialogLines = InterleaveArrays<DialogLineDurationPair>(
-                dialog.character1LinesDurationPairs, 
+                dialog.character1LinesDurationPairs,
                 dialog.character2LinesDurationPairs
                 );
 
@@ -82,8 +108,6 @@ public class DialogManager : MonoBehaviour
         }
     }
 
-    // helper functions:
-
     private T[] InterleaveArrays<T>(T[] array1, T[] array2)
     {
         T[] result = new T[array1.Length + array2.Length]; 
@@ -111,5 +135,11 @@ public class DialogManager : MonoBehaviour
             j++;
         }
         return result;
+    }
+
+    private void UpdateDialogClip()
+    {
+        if (dialog.dialogClip != null)
+            audioSource.clip = dialog.dialogClip;
     }
 }

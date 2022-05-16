@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a11a028bbceeb845913b2e931dd1b9e, type: 3}
+  m_Name: Daniel calling Cypher to devise a plan
+  m_EditorClassIdentifier: 
+  dialogClip: {fileID: 8300000, guid: b6cc5383a4e21b7498c3d584d8e4df38, type: 3}
+  character1Name: Cypher
+  character2Name: Daniel
+  character1LinesDurationPairs:
+  - line: "Daniel\u2026 Is it true we are all dying?"
+    duration: 5
+  - line: "That\u2019s a long story, but what is happening?"
+    duration: 4
+  - line: What are you thinking?
+    duration: 2
+  - line: "Alright\u2026 keep going."
+    duration: 2
+  - line: "Sounds good so far, what\u2019s stopping us? Let\u2019s start!"
+    duration: 6
+  - line: "That sounds almost impossible\u2026 but since they kept me in the dark
+      about this, then we have absolutely nothing to lose, I am willing to go against
+      Psi with you\u2026 We can do this."
+    duration: 13
+  character2LinesDurationPairs:
+  - line: "W-what? How\u2019d you know?"
+    duration: 3
+  - line: "Psi is refusing to let us do anything about it, but I\u2019m certain that
+      we can do something to save humanity."
+    duration: 6
+  - line: "I believe the exoplanets Kreia and Zhora are habitable and they\u2019re
+      not on the track of the impact, but I want to make sure of that first, so I
+      will take off soon to check them out, and I need your help of course."
+    duration: 12
+  - line: "Once I\u2019m certain of the habitability, we are going to start mass
+      transportation to the planets, in order to save everyone who wants to be saved. "
+    duration: 11
+  - line: "Psi does not want Lyke station to do anything about it, so we\u2019re
+      going to have to go against Psi\u2026"
+    duration: 5
+  - line: Let's Go!
+    duration: 2
+  startWith: 0

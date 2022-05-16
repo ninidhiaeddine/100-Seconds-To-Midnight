@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a11a028bbceeb845913b2e931dd1b9e, type: 3}
+  m_Name: Elijah Fighting with Daniel
+  m_EditorClassIdentifier: 
+  dialogClip: {fileID: 8300000, guid: bc4a2dcbe16fbe04da1eeabecc734a32, type: 3}
+  character1Name: Elijah
+  character2Name: Daniel
+  character1LinesDurationPairs:
+  - line: "Daniel\u2026 Please listen to me, you cannot do this, we will both end
+      up imprisoned, or worse\u2026 executed."
+    duration: 9
+  - line: "Dani\u2026 Please don\u2019t do this. I understand your frustration and
+      the fact that you think you can save humanity\u2026 but please, take a moment
+      to think of the risks."
+    duration: 10
+  - line: "DANIEL, YOU\u2019RE NOT DOING ANYTHING ABOUT THIS AND THAT\u2019S FINAL!"
+    duration: 3
+  - line: WATCH ME!
+    duration: 2
+  character2LinesDurationPairs:
+  - line: "We\u2019re going to die eventually if we don\u2019t do anything about
+      this! I don\u2019t understand how Psi isn\u2019t doing anything to stop this! "
+    duration: 10
+  - line: "Dad, I don\u2019t \u201Cthink\u201D I can save humanity. I know I can."
+    duration: 6
+  - line: "YOU CAN\u2019T TELL ME WHAT TO DO!"
+    duration: 2
+  startWith: 0

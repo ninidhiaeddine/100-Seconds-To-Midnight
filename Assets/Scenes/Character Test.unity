@@ -130,10 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4793855634719762144, guid: a0397a613c4a40e42b3270d46b03e102, type: 3}
-      propertyPath: gravityForce
-      value: -3
-      objectReference: {fileID: 0}
     - target: {fileID: 6292388329216298912, guid: a0397a613c4a40e42b3270d46b03e102, type: 3}
       propertyPath: m_Name
       value: Daniel
