@@ -81,7 +81,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6679102115516790480, guid: cc0e1978098c4764f9024f6cace5e66f, type: 3}
+  - {fileID: 2100000, guid: 76c991c5f643b074fb3a07987c55626f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1354,6 +1354,7 @@ GameObject:
   - component: {fileID: 6636297542649779482}
   - component: {fileID: 790647407591149408}
   - component: {fileID: 4793855634719762144}
+  - component: {fileID: 541757143}
   m_Layer: 0
   m_Name: Daniel
   m_TagString: Player
@@ -1390,7 +1391,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 0fbe1e0a320983844a4ad243d510c98a, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1408,6 +1409,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86292da024f4d9946bd299892a260774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkingSpeed: 1.5
+  runningSpeed: 3.5
+  rotationSpeed: 100
+  gravityForce: -3
+--- !u!143 &541757143
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6292388329216298912}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 1.6
+  m_Radius: 0.3
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0.8, z: 0}
 --- !u!1 &6482854400727517245
 GameObject:
   m_ObjectHideFlags: 0
