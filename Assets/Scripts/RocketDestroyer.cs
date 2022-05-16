@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class RocketDestroyer : MonoBehaviour
 {
-    [Range(1, 300)] public int lifetimeInSeconds = 10;
+    [Range(1, 120)] public int lifetimeInSeconds = 10;
 
     void Start()
     {
@@ -11,9 +11,11 @@ public class RocketDestroyer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.CompareTag("Asteroid"))
+            Destroy(other.gameObject);
+
         if (!other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Hit a collider!" + other.name);
             Destroy(this.gameObject);
         }
     }
