@@ -6,9 +6,8 @@ public enum Character { Character1, Character2 }
 public class DialogScriptableObject : ScriptableObject
 {
     public AudioClip dialogClip;
-    public string character1Name;
-    public string character2Name;
+    public string character1Name, character2Name;
+    public Color character1UiColor, character2UiColor;
     public DialogLineDurationPair[] character1LinesDurationPairs;
     public DialogLineDurationPair[] character2LinesDurationPairs;
-    public Character startWith = Character.Character1;
 }

@@ -15,6 +15,8 @@ MonoBehaviour:
   dialogClip: {fileID: 8300000, guid: b6cc5383a4e21b7498c3d584d8e4df38, type: 3}
   character1Name: Cypher
   character2Name: Daniel
+  character1UiColor: {r: 1, g: 0.92565304, b: 0, a: 1}
+  character2UiColor: {r: 1, g: 0.044025064, b: 0.44132534, a: 1}
   character1LinesDurationPairs:
   - line: "Daniel\u2026 Is it true we are all dying?"
     duration: 5

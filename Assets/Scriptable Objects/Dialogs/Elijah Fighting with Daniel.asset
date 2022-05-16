@@ -15,6 +15,8 @@ MonoBehaviour:
   dialogClip: {fileID: 8300000, guid: bc4a2dcbe16fbe04da1eeabecc734a32, type: 3}
   character1Name: Elijah
   character2Name: Daniel
+  character1UiColor: {r: 0.13725491, g: 1, b: 0.8039216, a: 1}
+  character2UiColor: {r: 1, g: 0.043137256, b: 0.44313726, a: 1}
   character1LinesDurationPairs:
   - line: "Daniel\u2026 Please listen to me, you cannot do this, we will both end
       up imprisoned, or worse\u2026 executed."

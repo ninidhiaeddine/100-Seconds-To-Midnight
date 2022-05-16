@@ -15,6 +15,8 @@ MonoBehaviour:
   dialogClip: {fileID: 8300000, guid: 66eaa6ba38bf2bb498110b99c10e4ed0, type: 3}
   character1Name: Anakin
   character2Name: Elijah
+  character1UiColor: {r: 0.11949676, g: 0.19252285, b: 1, a: 1}
+  character2UiColor: {r: 0.13725491, g: 1, b: 0.8039216, a: 1}
   character1LinesDurationPairs:
   - line: 'Hello Captain Miller, this is agent Anakin speaking. I am calling you
       to inform you of something highly discrete, and must not be shared with anyone. '
