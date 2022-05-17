@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Chapter1
   m_EditorClassIdentifier: 
   title: Chapter I
-  description: Cypher Knows
+  description: Cypher Knows, the Millers fight
+  sceneToLoad: Cutscene2

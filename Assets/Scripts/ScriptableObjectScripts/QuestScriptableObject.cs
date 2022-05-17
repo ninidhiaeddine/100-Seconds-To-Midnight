@@ -4,6 +4,6 @@ using UnityEngine;
 public class QuestScriptableObject : ScriptableObject
 {
     public string title;
-    public string objective;
-    public Transform destination;
+    public QuestTask[] tasks;
+    public bool completed = false;
 }

@@ -7,6 +7,7 @@ public class BackgroundFadeOut : MonoBehaviour
     // parameter:
     public float fadeOutDuration = 3.0f;
     public bool playOnAwake = true;
+    public bool removeFadeAtTheEnd = true;
 
     // singleton:
     public static BackgroundFadeOut Instance { get; private set; }
@@ -54,7 +55,8 @@ public class BackgroundFadeOut : MonoBehaviour
             yield return null;
         }
 
-        newColor.a = 1.0f;
+        if (removeFadeAtTheEnd)
+            newColor.a = 0.0f;
 
         background.color = newColor;
     }

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c2089960686dd54b93fd932d8bbedd7, type: 3}
+  m_Name: Quest3
+  m_EditorClassIdentifier: 
+  title: Explore the universe
+  tasks:
+  - objective: Go to the Lyke Station and take the Spaceship
+    destination: {fileID: 0}
+    completed: 0
+  - objective: Fly up to leave the earth's orbit
+    destination: {fileID: 0}
+    completed: 0
+  - objective: Fly to the exoplanets Kreia and Zhora
+    destination: {fileID: 0}
+    completed: 0
+  - objective: Land on the planets
+    destination: {fileID: 0}
+    completed: 0
+  - objective: Collect rock samples
+    destination: {fileID: 0}
+    completed: 0
+  - objective: Fly back to planet earth
+    destination: {fileID: 0}
+    completed: 0
+  - objective: Take the rock samples to the Lab
+    destination: {fileID: 0}
+    completed: 0
+  completed: 0

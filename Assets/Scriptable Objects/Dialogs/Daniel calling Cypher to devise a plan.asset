@@ -27,7 +27,7 @@ MonoBehaviour:
   - line: "Alright\u2026 keep going."
     duration: 2
   - line: "Sounds good so far, what\u2019s stopping us? Let\u2019s start!"
-    duration: 6
+    duration: 5
   - line: "That sounds almost impossible\u2026 but since they kept me in the dark
       about this, then we have absolutely nothing to lose, I am willing to go against
       Psi with you\u2026 We can do this."
@@ -50,4 +50,3 @@ MonoBehaviour:
     duration: 5
   - line: Let's Go!
     duration: 2
-  startWith: 0

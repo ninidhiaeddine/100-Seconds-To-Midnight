@@ -11,9 +11,6 @@ public class SceneEndingManager : MonoBehaviour
     /// </summary>
     /// 
 
-    // Parameter:
-    public string sceneNameToLoad;
-
     // singleton:
     public static SceneEndingManager Instance { get; private set; }
 
@@ -34,15 +31,16 @@ public class SceneEndingManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public void EndScene()
+    public void EndScene(string sceneToLoad)
     {
         BackgroundFadeOut.Instance.FadeOut();
-        StartCoroutine(LoadSceneCoroutine());
+        StartCoroutine(LoadSceneCoroutine(sceneToLoad));
     }
 
-    private IEnumerator LoadSceneCoroutine()
+    private IEnumerator LoadSceneCoroutine(string sceneToLoad)
     {
         yield return new WaitForSeconds(BackgroundFadeOut.Instance.fadeOutDuration);
-        SceneManager.LoadScene(sceneNameToLoad);
+        SceneManager.LoadScene(sceneToLoad);
+        BackgroundFadeIn.Instance.FadeIn();
     }
 }

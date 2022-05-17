@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class PlanetEntry : MonoBehaviour
 {
-    public string sceneNameToLoad;
+    public string sceneToLoad;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneEndingManager.Instance.sceneNameToLoad = sceneNameToLoad;
-            SceneEndingManager.Instance.EndScene();            
+            SceneEndingManager.Instance.EndScene(sceneToLoad);            
         }
     }
 }

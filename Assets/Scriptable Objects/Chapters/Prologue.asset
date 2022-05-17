@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Prologue
   description: Psi informing Elijah Miller of Andromeda
+  sceneToLoad: Cutscene1
