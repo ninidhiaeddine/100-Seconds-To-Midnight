@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Chapter1Behavior : StateMachineBehaviour
 {

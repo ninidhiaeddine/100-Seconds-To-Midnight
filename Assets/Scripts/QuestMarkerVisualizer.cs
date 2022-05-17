@@ -37,7 +37,7 @@ public class QuestMarkerVisualizer : MonoBehaviour
         }
         catch
         {
-            Debug.Log("Quest completed");
+
         }
     }
 

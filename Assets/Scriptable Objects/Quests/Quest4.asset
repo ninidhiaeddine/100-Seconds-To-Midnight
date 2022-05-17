@@ -15,9 +15,9 @@ MonoBehaviour:
   title: Flying back to the inhabitable planet
   tasks:
   - objective: Go to Lyke Station and fly the Spaceship
-    destination: {fileID: 0}
+    destination: {x: 120.46, y: 15.98, z: -14.18}
     completed: 0
   - objective: Fly to the inhabitable planet
-    destination: {fileID: 0}
+    destination: {x: 3500, y: 5200, z: 9000}
     completed: 0
   completed: 0

@@ -7,11 +7,28 @@ public class QuestManager : MonoBehaviour
     public static UnityEvent<string> QuestCompletedEvent;
     public QuestScriptableObject currentActiveQuest;
 
+    // singelton:
+    public static QuestManager Instance;
+
     // helper:
     int index;
 
     private void Awake()
     {
+        // initialize singleton:
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+
+        // dont destroy on load:
+        DontDestroyOnLoad(this.gameObject);
+
+        // initialize events:
         if (QuestMarkerReachedEvent == null)
             QuestMarkerReachedEvent = new UnityEvent();
         if (QuestCompletedEvent == null)

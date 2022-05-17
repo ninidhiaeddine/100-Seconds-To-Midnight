@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Quest1Behavior : StateMachineBehaviour
+public class Quest2Behavior : StateMachineBehaviour
 {
     public QuestScriptableObject quest;
 

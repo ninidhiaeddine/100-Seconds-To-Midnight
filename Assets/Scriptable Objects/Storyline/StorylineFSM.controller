@@ -26,6 +26,19 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &-8090942683474543162
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a40a528d42218bd41a34c0486afca566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: 28c8ae4cf3c1bfa44b36b5ac1e7c112a, type: 2}
 --- !u!1101 &-7846622187946278598
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -254,10 +267,10 @@ AnimatorStateMachine:
     m_Position: {x: 40, y: 500, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6288793607668962345}
-    m_Position: {x: 290, y: 490, z: 0}
+    m_Position: {x: 300, y: 500, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1581868835058329896}
-    m_Position: {x: 290, y: 580, z: 0}
+    m_Position: {x: 300, y: 580, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2483605437742078060}
     m_Position: {x: 560, y: 320, z: 0}
@@ -551,7 +564,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -5960542502188272136}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 1358037144202395125}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -678,7 +692,7 @@ AnimatorController:
   - m_Name: Prologue
     m_Type: 3
     m_DefaultFloat: 0
-    m_DefaultInt: 0
+    m_DefaultInt: 1
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: Chapter1
@@ -788,6 +802,19 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &1358037144202395125
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1750b93375937ce429ca901f6fdfc808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: faf8750036cf41d4580846e0ae0d6bd6, type: 2}
 --- !u!114 &2184493349568119942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1045,7 +1072,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 7863886143218455572}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: -8090942683474543162}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1072,6 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43d59c9d6d3ed094b81505e78d734836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: 0afa497d497140242ad75d5e06f6a083, type: 2}
 --- !u!1101 &7863886143218455572
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1097,6 +1126,19 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &8205599197159573317
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a478d840323b6e44eab7978698381c6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quest: {fileID: 11400000, guid: c69e796e6a240704e953d598efc639e6, type: 2}
 --- !u!1102 &8217721663032807222
 AnimatorState:
   serializedVersion: 6
@@ -1109,7 +1151,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -6723961534949186459}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 8205599197159573317}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

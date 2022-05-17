@@ -46,7 +46,6 @@ public class ChapterSceneManager : MonoBehaviour
     private IEnumerator NotifyDone()
     {
         yield return new WaitForSeconds(durationBeforeLoadingScene);
-        Debug.Log(chapter.name);
         StorytellingManager.Instance.storytellingFSM.SetInteger(chapter.name, 1);
     }
 }

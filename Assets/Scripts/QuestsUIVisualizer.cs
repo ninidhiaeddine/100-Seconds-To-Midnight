@@ -1,5 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,7 +23,7 @@ public class QuestsUIVisualizer : MonoBehaviour
         if (visualizeOnAwake)
         {
             IntantiateQuestCanvas();
-            PopulateQuestCanvasInScene();
+            StartCoroutine(PopulateUIAfterDelay());
         }
 
         QuestManager.QuestMarkerReachedEvent.AddListener(QuestMarkerReachedEventHandler);
@@ -76,5 +76,11 @@ public class QuestsUIVisualizer : MonoBehaviour
     private void QuestMarkerReachedEventHandler()
     {
         UpdateQuestTasks();
+    }
+
+    private IEnumerator PopulateUIAfterDelay(float delay=0.5f)
+    {
+        yield return new WaitForSeconds(delay);
+        PopulateQuestCanvasInScene();
     }
 }

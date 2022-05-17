@@ -15,6 +15,6 @@ MonoBehaviour:
   title: Convincing Elijah Miller
   tasks:
   - objective: Go back to the house and talk with your father
-    destination: {fileID: 0}
+    destination: {x: 45.24, y: 23.92, z: -7.64}
     completed: 0
   completed: 0
