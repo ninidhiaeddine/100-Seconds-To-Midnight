@@ -18,8 +18,7 @@ MonoBehaviour:
   character1UiColor: {r: 0.11764706, g: 0.19215687, b: 1, a: 1}
   character2UiColor: {r: 1, g: 0.9254902, b: 0, a: 1}
   character1LinesDurationPairs:
-  - line: "We are all dying\u2026 It is a sh-shamee. Anakin slurred their words as
-      they were extremely drunk and off their meds."
+  - line: "We are all dying\u2026 It is a sh-shamee."
     duration: 5
   - line: W-well, I work for Psi, and we f-found out that Andromeda is colliding
       with Earth.
@@ -36,4 +35,3 @@ MonoBehaviour:
   - line: "I work for Psi as well, but I wasn\u2019t informed of this, are you lying
       to me?"
     duration: 6
-  startWith: 0
