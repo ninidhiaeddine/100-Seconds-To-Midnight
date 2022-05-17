@@ -10,7 +10,6 @@ public class QuestsUIVisualizer : MonoBehaviour
     public GameObject questTaskPrefab;
 
     [Header("Parameter")]
-    public QuestManager questManager;
     public bool visualizeOnAwake = true;
 
     // helper variables:
@@ -40,20 +39,20 @@ public class QuestsUIVisualizer : MonoBehaviour
         {
             // update quest title:
             Text questTitleText = questCanvasInScene.transform.GetChild(0).GetChild(0).GetChild(0).gameObject.GetComponent<Text>();
-            questTitleText.text = questManager.currentActiveQuest.title;
+            questTitleText.text = QuestManager.Instance.currentActiveQuest.title;
 
             // populate tasks:
-            for (int i = 0; i < questManager.currentActiveQuest.tasks.Length; i++)
+            for (int i = 0; i < QuestManager.Instance.currentActiveQuest.tasks.Length; i++)
             {
                 GameObject task = Instantiate(questTaskPrefab, questCanvasInScene.transform.GetChild(0).GetChild(1));
                 Text taskText = task.GetComponent<Text>();
-                taskText.text = questManager.currentActiveQuest.tasks[i].objective;
+                taskText.text = QuestManager.Instance.currentActiveQuest.tasks[i].objective;
 
                 // store text to be updated later:
                 tasksTexts.Add(taskText);
 
                 // determine whether it's finished or not:
-                if (questManager.currentActiveQuest.tasks[i].completed)
+                if (QuestManager.Instance.currentActiveQuest.tasks[i].completed)
                     taskText.text += " <color=#7DFF3C>(Completed)</color>";
                 else
                     taskText.text += " <color=#FF077C>(Unfinished)</color>";
@@ -66,10 +65,10 @@ public class QuestsUIVisualizer : MonoBehaviour
         for (int i = 0; i < tasksTexts.Count; i++)
         {
             // determine whether it's finished or not:
-            if (questManager.currentActiveQuest.tasks[i].completed)
-                tasksTexts[i].text = questManager.currentActiveQuest.tasks[i].objective + " <color=#7DFF3C>(Completed)</color>";
+            if (QuestManager.Instance.currentActiveQuest.tasks[i].completed)
+                tasksTexts[i].text = QuestManager.Instance.currentActiveQuest.tasks[i].objective + " <color=#7DFF3C>(Completed)</color>";
             else
-                tasksTexts[i].text = questManager.currentActiveQuest.tasks[i].objective + " <color=#FF077C>(Unfinished)</color>";
+                tasksTexts[i].text = QuestManager.Instance.currentActiveQuest.tasks[i].objective + " <color=#FF077C>(Unfinished)</color>";
         }
     }
 

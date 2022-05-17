@@ -14,6 +14,6 @@ public class Quest3Behavior : StateMachineBehaviour
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        SceneEndingManager.Instance.EndScene("ChapterScene");
+        SceneEndingManager.Instance.EndScene("Home");
     }
 }

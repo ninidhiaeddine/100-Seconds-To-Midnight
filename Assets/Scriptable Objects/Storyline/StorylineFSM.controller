@@ -321,7 +321,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 637c90eef3fb6614f90d095ee61e628e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prologueScriptableObject: {fileID: 0}
 --- !u!1101 &-4790612499369406589
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -617,7 +616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b96520720c8b90641af004f19d0bbbad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prologueScriptableObject: {fileID: 0}
 --- !u!1102 &-250083106835637847
 AnimatorState:
   serializedVersion: 6
@@ -692,7 +690,7 @@ AnimatorController:
   - m_Name: Prologue
     m_Type: 3
     m_DefaultFloat: 0
-    m_DefaultInt: 1
+    m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: Chapter1

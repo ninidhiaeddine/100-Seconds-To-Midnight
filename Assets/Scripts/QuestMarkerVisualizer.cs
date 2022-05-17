@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.Events;
+using System.Collections;
 
 public class QuestMarkerVisualizer : MonoBehaviour
 {
@@ -7,7 +7,6 @@ public class QuestMarkerVisualizer : MonoBehaviour
     public GameObject destinationMarkerPrefab;
 
     [Header("Parameter")]
-    public QuestManager questManager;
     public bool visualizeMarkersOneAtATime = true;
 
     // helpers:
@@ -16,13 +15,13 @@ public class QuestMarkerVisualizer : MonoBehaviour
 
     void Start()
     {
-        PlaceMarker();
+        StartCoroutine(PlaceMarkerAfterDelay());
         QuestManager.QuestMarkerReachedEvent.AddListener(QuestMarkerReachedEventHandler);
     }
 
     private Vector3 GetMarkerNextPosition()
     {
-        Vector3 destination = questManager.currentActiveQuest.tasks[index].destination;
+        Vector3 destination = QuestManager.Instance.currentActiveQuest.tasks[index].destination;
         index++;
         return destination;
     }
@@ -48,6 +47,12 @@ public class QuestMarkerVisualizer : MonoBehaviour
         if (currentMarker != null)
             Destroy(currentMarker.gameObject);
         
+        PlaceMarker();
+    }
+
+    private IEnumerator PlaceMarkerAfterDelay(float delay = 0.5f)
+    {
+        yield return new WaitForSeconds(delay);
         PlaceMarker();
     }
 }
