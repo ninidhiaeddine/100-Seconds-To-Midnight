@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4068167649604678}
   m_Layer: 0
   m_Name: Land4
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 23490173040921004}
   m_Layer: 0
   m_Name: Mesh245
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

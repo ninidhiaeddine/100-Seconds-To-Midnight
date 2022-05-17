@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4508918380756680}
   m_Layer: 0
   m_Name: rock_mini2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 23484236413926792}
   m_Layer: 0
   m_Name: Mesh84
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

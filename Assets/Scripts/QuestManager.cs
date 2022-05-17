@@ -5,6 +5,7 @@ public class QuestManager : MonoBehaviour
 {
     public static UnityEvent QuestMarkerReachedEvent;
     public static UnityEvent<string> QuestCompletedEvent;
+    public static UnityEvent QuestChangedEvent;
     public QuestScriptableObject currentActiveQuest;
 
     // singelton:
@@ -18,21 +19,20 @@ public class QuestManager : MonoBehaviour
         // initialize singleton:
         if (Instance != null && Instance != this)
         {
-            Destroy(this);
+            Destroy(this.gameObject);
         }
         else
         {
             Instance = this;
         }
 
-        // dont destroy on load:
-        DontDestroyOnLoad(this.gameObject);
-
         // initialize events:
         if (QuestMarkerReachedEvent == null)
             QuestMarkerReachedEvent = new UnityEvent();
         if (QuestCompletedEvent == null)
             QuestCompletedEvent = new UnityEvent<string>();
+        if (QuestChangedEvent == null)
+            QuestChangedEvent = new UnityEvent();
 
         QuestMarkerReachedEvent.AddListener(QuestMarkerReachedEventHandler);
 

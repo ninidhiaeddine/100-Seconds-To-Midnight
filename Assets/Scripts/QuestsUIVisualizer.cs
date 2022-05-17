@@ -9,9 +9,6 @@ public class QuestsUIVisualizer : MonoBehaviour
     public GameObject questCanvasPrefab;
     public GameObject questTaskPrefab;
 
-    [Header("Parameter")]
-    public bool visualizeOnAwake = true;
-
     // helper variables:
     private GameObject questCanvasInScene;
     private List<Text> tasksTexts;
@@ -19,13 +16,9 @@ public class QuestsUIVisualizer : MonoBehaviour
     private void Start()
     {
         tasksTexts = new List<Text>();
-        if (visualizeOnAwake)
-        {
-            IntantiateQuestCanvas();
-            StartCoroutine(PopulateUIAfterDelay());
-        }
 
         QuestManager.QuestMarkerReachedEvent.AddListener(QuestMarkerReachedEventHandler);
+        QuestManager.QuestChangedEvent.AddListener(QuestChangedEventHandler);
     }
 
     private void IntantiateQuestCanvas()
@@ -60,7 +53,7 @@ public class QuestsUIVisualizer : MonoBehaviour
         }
     }
 
-    public void UpdateQuestTasks()
+    public void UpdateQuestTasksCanvas()
     {
         for (int i = 0; i < tasksTexts.Count; i++)
         {
@@ -74,12 +67,20 @@ public class QuestsUIVisualizer : MonoBehaviour
 
     private void QuestMarkerReachedEventHandler()
     {
-        UpdateQuestTasks();
+        UpdateQuestTasksCanvas();
     }
 
-    private IEnumerator PopulateUIAfterDelay(float delay=0.5f)
+    private void QuestChangedEventHandler()
+    {
+        Debug.Log("Handler Called");
+        StartCoroutine(PopulateUIAfterDelay());
+    }
+
+    private IEnumerator PopulateUIAfterDelay(float delay=0.2f)
     {
         yield return new WaitForSeconds(delay);
+        Destroy(questCanvasInScene);
+        IntantiateQuestCanvas();
         PopulateQuestCanvasInScene();
     }
 }

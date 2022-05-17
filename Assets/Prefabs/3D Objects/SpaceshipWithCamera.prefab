@@ -541,8 +541,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44701dc97fe3ed848bcfa06a459eb1c6, type: 3}
+--- !u!1 &8169167310749258378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 939362748432085931, guid: 44701dc97fe3ed848bcfa06a459eb1c6, type: 3}
+  m_PrefabInstance: {fileID: 8959910437599977761}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8797050488685135920 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 451092090600237329, guid: 44701dc97fe3ed848bcfa06a459eb1c6, type: 3}
   m_PrefabInstance: {fileID: 8959910437599977761}
   m_PrefabAsset: {fileID: 0}
+--- !u!135 &520204508396496462
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8169167310749258378}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.3
+  m_Center: {x: 0, y: 0.16425985, z: 0}
+--- !u!114 &5016423534582012261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8169167310749258378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67d1f115d7facef48951a5c0a16456ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 7357458418464923429, guid: c2eeaa15b3d3e814ba72faebd1485c6b, type: 3}
+  distanceAwayFromSpaceshiptoDismount: 2
+  distanceFromGroundToDismount: 2
+  spaceshipCanvasChild: {fileID: 6890082636473713319}
+  spaceshipVCChild: {fileID: 6890082636477943145}

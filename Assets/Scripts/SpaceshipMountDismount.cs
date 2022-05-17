@@ -1,33 +1,36 @@
 using UnityEngine;
+using System.Collections;
 
 public class SpaceshipMountDismount : MonoBehaviour
 {
+    [Header("Parameters")]
     public GameObject playerPrefab;
     public float distanceAwayFromSpaceshiptoDismount = 2.0f;
     public float distanceFromGroundToDismount = 2.0f;
+    public float delayToDismount;
+
+    [Header("Reference To Children")]
+    public Transform spaceshipCanvasChild;
+    public Transform spaceshipVCChild;
 
     // helper variable:
     private bool isInSpaceship = false;
+    private bool canDismount = false;
 
     // components:
     private ShipController shipController;
     private ShipShooter shipShooter;
-
-    // children:
-    private Transform spaceshipCanvasChild;
-    private Transform spaceshipVCChild;
+    
 
     private void Start()
     {
         shipController = GetComponent<ShipController>();
         shipShooter = GetComponent<ShipShooter>();
-        spaceshipCanvasChild = transform.GetChild(0);
-        spaceshipVCChild = transform.GetChild(1);
     }
 
     private void Update()
     {
-        if (isInSpaceship && Input.GetKeyDown(KeyCode.F) && CloseToGround())
+        if (isInSpaceship && Input.GetKeyDown(KeyCode.F) && CloseToGround() && canDismount)
         {
             DismountSpaceship();
         }
@@ -46,6 +49,13 @@ public class SpaceshipMountDismount : MonoBehaviour
         ActivateScriptsAndComponents();
         Destroy(player);
         isInSpaceship = true;
+        StartCoroutine(CanDismountAfterDelay());
+    }
+
+    private IEnumerator CanDismountAfterDelay()
+    {
+        yield return new WaitForSeconds(delayToDismount);
+        canDismount = true;
     }
 
     private void DismountSpaceship()
@@ -57,6 +67,7 @@ public class SpaceshipMountDismount : MonoBehaviour
         Vector3 playerPos = Random.onUnitSphere * distanceAwayFromSpaceshiptoDismount + transform.position;
         player.transform.position = playerPos;
 
+        canDismount = false;
         isInSpaceship = false;
     }
 

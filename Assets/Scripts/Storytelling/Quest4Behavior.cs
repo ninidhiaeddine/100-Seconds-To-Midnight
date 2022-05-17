@@ -6,9 +6,10 @@ public class Quest4Behavior : StateMachineBehaviour
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (QuestManager.Instance != null && QuestManager.Instance.currentActiveQuest == null)
+        if (QuestManager.Instance != null && QuestManager.Instance.currentActiveQuest != quest)
         {
             QuestManager.Instance.currentActiveQuest = quest;
+            QuestManager.QuestChangedEvent.Invoke();
         }
     }
 
