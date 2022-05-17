@@ -1,17 +1,18 @@
 using UnityEngine;
 using System.Collections;
 
-public class DialogManager : MonoBehaviour
+public class DialogDirector : MonoBehaviour
 {
     // component:
     private AudioSource audioSource;
 
     // singleton:
-    public static DialogManager Instance { get; private set; }
+    public static DialogDirector Instance { get; private set; }
 
     // dialog:
     public DialogScriptableObject dialog;
     public DialogTextTyper dialogTextTyper;
+    public bool playOnAwake = true;
 
     void Awake()
     {
@@ -29,8 +30,8 @@ public class DialogManager : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
 
-        // just for testing:
-        StartDialog();
+        if (playOnAwake)
+            StartDialog();
     }
 
     // public functions:

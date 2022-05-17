@@ -20,7 +20,7 @@ MonoBehaviour:
   character1LinesDurationPairs:
   - line: "Daniel\u2026 Please listen to me, you cannot do this, we will both end
       up imprisoned, or worse\u2026 executed."
-    duration: 9
+    duration: 8
   - line: "Dani\u2026 Please don\u2019t do this. I understand your frustration and
       the fact that you think you can save humanity\u2026 but please, take a moment
       to think of the risks."
@@ -37,4 +37,3 @@ MonoBehaviour:
     duration: 6
   - line: "YOU CAN\u2019T TELL ME WHAT TO DO!"
     duration: 2
-  startWith: 0
