@@ -1,13 +1,13 @@
 using UnityEngine;
 using System.Collections;
 
-public class DialogManager : MonoBehaviour
+public class DialogDirector : MonoBehaviour
 {
     // component:
     private AudioSource audioSource;
 
     // singleton:
-    public static DialogManager Instance { get; private set; }
+    public static DialogDirector Instance { get; private set; }
 
     // dialog:
     public DialogScriptableObject dialog;
