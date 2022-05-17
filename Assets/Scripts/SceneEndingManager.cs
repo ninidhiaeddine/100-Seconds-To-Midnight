@@ -29,6 +29,11 @@ public class SceneEndingManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     public void EndScene()
     {
         BackgroundFadeOut.Instance.FadeOut();

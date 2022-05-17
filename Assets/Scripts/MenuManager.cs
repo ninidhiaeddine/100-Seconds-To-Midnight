@@ -8,8 +8,7 @@ public class MenuManager : MonoBehaviour
 
     public void PlayOnClick()
     {
-        SceneEndingManager.Instance.sceneNameToLoad = "Home";
-        SceneEndingManager.Instance.EndScene();
+        StorytellingManager.Instance.storytellingFSM.SetTrigger("Play");
     }
 
     public void AboutOnClick()
