@@ -14,6 +14,13 @@ public class DynamicDistanceWorldText : MonoBehaviour
     void Start()
     {
         text = GetComponent<Text>();
+
+        // find target:
+        GameObject targetGameObject = GameObject.FindWithTag("Player");
+        if (targetGameObject != null)
+            target = targetGameObject.transform;
+        else
+            target = GameObject.FindWithTag("SpaceshipPlayer").transform;
     }
 
     void Update()
@@ -28,6 +35,7 @@ public class DynamicDistanceWorldText : MonoBehaviour
     {
         transform.LookAt(target);
         transform.Rotate(transform.up, 180.0f);
+        transform.Rotate(0, 0, -transform.rotation.eulerAngles.z);
     }
 
     void ComputeDistance()
@@ -37,7 +45,22 @@ public class DynamicDistanceWorldText : MonoBehaviour
 
     void UpdateText()
     {
-        text.text = string.Format("{0:F1}", distance) + " Gm";
+        if (distance < 1000)
+        {
+            text.text = string.Format("{0:F1}", distance) + " m";
+        }
+        else if (distance > 1000)
+        {
+            text.text = string.Format("{0:F1}", distance / 1000) + " Km";
+        }
+        else if (distance > 1000000)
+        {
+            text.text = string.Format("{0:F1}", distance / 1000000) + " Mm";
+        }
+        else if (distance > 1000000000)
+        {
+            text.text = string.Format("{0:F1}", distance / 1000000000) + " Gm";
+        }
     }
 
     void ResizeText()

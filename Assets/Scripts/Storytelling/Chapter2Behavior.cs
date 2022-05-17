@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Chapter2Behavior : StateMachineBehaviour
 {
-    public ChapterScriptableObject prologueScriptableObject;
+    public ChapterScriptableObject chapterScriptableObject;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -12,9 +12,9 @@ public class Chapter2Behavior : StateMachineBehaviour
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (ChapterSceneManager.Instance != null && ChapterSceneManager.Instance.chapter != prologueScriptableObject)
+        if (ChapterSceneManager.Instance != null && ChapterSceneManager.Instance.chapter != chapterScriptableObject)
         {
-            ChapterSceneManager.Instance.UpdateChapter(prologueScriptableObject);
+            ChapterSceneManager.Instance.UpdateChapter(chapterScriptableObject);
         }
     }
 

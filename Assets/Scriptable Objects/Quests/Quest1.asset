@@ -15,9 +15,9 @@ MonoBehaviour:
   title: Familiarizing yourself with the environment
   tasks:
   - objective: Go to the Lab (Meet Cypher and Anakin)
-    destination: {fileID: 0}
+    destination: {x: 125.63, y: 22.33, z: 49.44}
     completed: 0
   - objective: Go to the House (Meet your father)
-    destination: {fileID: 0}
+    destination: {x: 47.54, y: 22.33, z: -9.41}
     completed: 0
   completed: 0

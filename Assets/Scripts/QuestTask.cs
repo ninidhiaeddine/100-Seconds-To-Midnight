@@ -4,6 +4,6 @@ using UnityEngine;
 public class QuestTask
 {
     public string objective;
-    public Transform destination;
+    public Vector3 destination;
     public bool completed = false;
 }

@@ -2,24 +2,19 @@ using UnityEngine;
 
 public class PrologueBehavior : StateMachineBehaviour
 {
-    public ChapterScriptableObject prologueScriptableObject;
-
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        SceneEndingManager.Instance.EndScene("ChapterScene");
-    }
+    public ChapterScriptableObject chapterScriptableObject;
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (ChapterSceneManager.Instance != null && ChapterSceneManager.Instance.chapter != prologueScriptableObject)
+        if (ChapterSceneManager.Instance != null && ChapterSceneManager.Instance.chapter != chapterScriptableObject)
         {
-            ChapterSceneManager.Instance.UpdateChapter(prologueScriptableObject);
+            ChapterSceneManager.Instance.UpdateChapter(chapterScriptableObject);
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        SceneEndingManager.Instance.EndScene("Cutscene1");
+    }
 }

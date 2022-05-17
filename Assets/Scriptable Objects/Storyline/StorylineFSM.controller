@@ -110,7 +110,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 6
-    m_ConditionEvent: HomeQuest2
+    m_ConditionEvent: Quest2
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1268091108371381886}
@@ -163,7 +163,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 6
-    m_ConditionEvent: OpenSpaceQuest
+    m_ConditionEvent: Quest4
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2483605437742078060}
@@ -191,6 +191,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51b01dd3501e59047be7a223f6a6ea0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1101 &-5960542502188272136
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 2483605437742078060}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.25
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1107 &-5808787080804347953
 AnimatorStateMachine:
   serializedVersion: 6
@@ -324,7 +346,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7507161b8916e2b46bfe706065cfe58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prologueScriptableObject: {fileID: 0}
 --- !u!1102 &-4484201157758867692
 AnimatorState:
   serializedVersion: 6
@@ -362,7 +383,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 6
-    m_ConditionEvent: HomeQuest1
+    m_ConditionEvent: Quest1
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -55052659134335689}
@@ -390,7 +411,7 @@ AnimatorStateTransition:
     m_ConditionEvent: Play
     m_EventTreshold: 0
   - m_ConditionMode: 6
-    m_ConditionEvent: HomeQuest1
+    m_ConditionEvent: Quest1
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -55052659134335689}
@@ -431,6 +452,18 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &-2433360745337227561
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8062cf45ecb5a924ea3a1eb9492f9265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1101 &-1933599413156247648
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -513,10 +546,11 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OpenSpaceQuest
+  m_Name: Quest4
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions: []
+  m_Transitions:
+  - {fileID: -5960542502188272136}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -689,25 +723,25 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: HomeQuest1
+  - m_Name: Quest1
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: HomeQuest2
+  - m_Name: Quest2
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: HomeQuest3
+  - m_Name: Quest3
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: OpenSpaceQuest
+  - m_Name: Quest4
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -766,7 +800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f21966178247a1f40966ab1809806aa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prologueScriptableObject: {fileID: 11400000, guid: d3b9e405d45a9c74697b4a5243a48ddd, type: 2}
+  chapterScriptableObject: {fileID: 11400000, guid: d3b9e405d45a9c74697b4a5243a48ddd, type: 2}
 --- !u!1102 &2483605437742078060
 AnimatorState:
   serializedVersion: 6
@@ -779,7 +813,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -4790612499369406589}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 4442774145039574939}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -806,7 +841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 640bc00263debc248bd8d3bcf81e891b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prologueScriptableObject: {fileID: 0}
+  chapterScriptableObject: {fileID: 11400000, guid: eb31ccb6044784e458b9b2e202a1967c, type: 2}
 --- !u!1101 &2967049788379581655
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -839,7 +874,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HomeQuest1
+  m_Name: Quest1
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -888,6 +923,19 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &4442774145039574939
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20a14590398529a48be99c7b11a351fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chapterScriptableObject: {fileID: 11400000, guid: 2dc61098de933c14cbfa7d08a825781b, type: 2}
 --- !u!1101 &4811162711104093863
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -984,7 +1032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8410c5227cea1e54292381e25d4e2290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prologueScriptableObject: {fileID: 0}
+  chapterScriptableObject: {fileID: 11400000, guid: 36cf79e510e1d364da35a6db1cf5fc53, type: 2}
 --- !u!1102 &6288793607668962345
 AnimatorState:
   serializedVersion: 6
@@ -992,7 +1040,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HomeQuest3
+  m_Name: Quest3
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1033,7 +1081,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 6
-    m_ConditionEvent: HomeQuest3
+    m_ConditionEvent: Quest3
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1581868835058329896}
@@ -1056,7 +1104,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HomeQuest2
+  m_Name: Quest2
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -1091,7 +1139,8 @@ AnimatorState:
   - {fileID: -3565101927472734880}
   - {fileID: 4811162711104093863}
   - {fileID: -6523292886843554980}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: -2433360745337227561}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
