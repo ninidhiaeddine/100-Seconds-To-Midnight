@@ -12,6 +12,7 @@ public class DialogDirector : MonoBehaviour
     // dialog:
     public DialogScriptableObject dialog;
     public DialogTextTyper dialogTextTyper;
+    public bool playOnAwake = true;
 
     void Awake()
     {
@@ -29,8 +30,8 @@ public class DialogDirector : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
 
-        // just for testing:
-        StartDialog();
+        if (playOnAwake)
+            StartDialog();
     }
 
     // public functions:
