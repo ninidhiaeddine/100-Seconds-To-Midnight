@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpeedTracker : MonoBehaviour
 {
     // parameter:
-    public bool printSpeed = true;
+    public Text speedUI;
     public float speedFactor = 10.0f;
 
     // helper variable:
@@ -18,13 +19,17 @@ public class SpeedTracker : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (printSpeed)
-            PrintSpeed();
+        UpdateSpeedUI();
     }
 
-    void PrintSpeed()
+    private void UpdateSpeedUI()
     {
-        Debug.Log("Speed: " + (GetSpeed() * speedFactor).ToString("F2") + " km/h");
+        speedUI.text = FormatSpeed();
+    }
+
+    private string FormatSpeed()
+    {
+        return (GetSpeed() * speedFactor).ToString("F2") + " Km/h";
     }
 
     public float GetSpeed()
