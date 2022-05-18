@@ -118,7 +118,6 @@ public class ShipController : MonoBehaviour
                 Vector3.back 
                 * rollInput 
                 * rollTorque 
-                * Mathf.Abs(thrustInput)
                 * Time.deltaTime
                 );
         }

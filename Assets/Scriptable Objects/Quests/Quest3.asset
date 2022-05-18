@@ -16,19 +16,19 @@ MonoBehaviour:
   tasks:
   - objective: Go to the Lyke Station and take the Spaceship
     destination: {x: 120.46, y: 15.98, z: -14.18}
-    completed: 0
+    completed: 1
   - objective: Fly up to leave the earth's orbit
-    destination: {x: 120.46, y: 150, z: -14.18}
-    completed: 0
+    destination: {x: 132.9, y: 90, z: -14.18}
+    completed: 1
   - objective: Fly to the exoplanet Kreia and Land on it
-    destination: {x: 0, y: 100, z: 0}
-    completed: 0
+    destination: {x: 0, y: 130, z: 0}
+    completed: 1
   - objective: Fly to the exoplanet Zhora and Land on it
-    destination: {x: 3500, y: 5200, z: 9000}
-    completed: 0
+    destination: {x: 800, y: 400, z: 200}
+    completed: 1
   - objective: Fly back to planet earth
-    destination: {x: 0, y: 100, z: -7700}
-    completed: 0
+    destination: {x: 0, y: 140, z: -1200}
+    completed: 1
   - objective: Take rock samples to the Lab
     destination: {x: 125.63, y: 22.33, z: 49.44}
     completed: 0

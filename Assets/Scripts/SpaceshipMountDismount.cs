@@ -14,7 +14,7 @@ public class SpaceshipMountDismount : MonoBehaviour
     public Transform spaceshipVCChild;
 
     // helper variable:
-    private bool isInSpaceship = false;
+    public bool isInSpaceship = false;
     private bool canDismount = false;
 
     // components:
@@ -50,6 +50,9 @@ public class SpaceshipMountDismount : MonoBehaviour
         Destroy(player);
         isInSpaceship = true;
         StartCoroutine(CanDismountAfterDelay());
+
+        // update global player reference:
+        PlayerReferenceTracker.Instance.globalPlayerReference = this.transform;
     }
 
     private IEnumerator CanDismountAfterDelay()
@@ -69,6 +72,9 @@ public class SpaceshipMountDismount : MonoBehaviour
 
         canDismount = false;
         isInSpaceship = false;
+
+        // update global player reference:
+        PlayerReferenceTracker.Instance.globalPlayerReference = player.transform;
     }
 
     private void ActivateScriptsAndComponents()

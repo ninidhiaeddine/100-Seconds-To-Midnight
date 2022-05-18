@@ -539,6 +539,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spaceship
       objectReference: {fileID: 0}
+    - target: {fileID: 2578735976738803673, guid: 44701dc97fe3ed848bcfa06a459eb1c6, type: 3}
+      propertyPath: thrustForce
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44701dc97fe3ed848bcfa06a459eb1c6, type: 3}
 --- !u!1 &8169167310749258378 stripped
@@ -579,5 +583,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 7357458418464923429, guid: c2eeaa15b3d3e814ba72faebd1485c6b, type: 3}
   distanceAwayFromSpaceshiptoDismount: 2
   distanceFromGroundToDismount: 2
+  delayToDismount: 0
   spaceshipCanvasChild: {fileID: 6890082636473713319}
   spaceshipVCChild: {fileID: 6890082636477943145}
+  isInSpaceship: 0

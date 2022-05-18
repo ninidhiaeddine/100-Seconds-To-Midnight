@@ -8,7 +8,7 @@ public class PlanetEntry : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("SpaceshipPlayer"))
         {
             SceneEndingManager.Instance.EndScene(sceneToLoad);            
         }

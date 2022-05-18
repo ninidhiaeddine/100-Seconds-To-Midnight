@@ -6,7 +6,6 @@ public class DynamicDistanceWorldText : MonoBehaviour
 {
     // parameters:
     public float scalingRatio = 0.05f;
-    public Transform target;
 
     private double distance;
     private Text text;
@@ -14,13 +13,6 @@ public class DynamicDistanceWorldText : MonoBehaviour
     void Start()
     {
         text = GetComponent<Text>();
-
-        // find target:
-        GameObject targetGameObject = GameObject.FindWithTag("Player");
-        if (targetGameObject != null)
-            target = targetGameObject.transform;
-        else
-            target = GameObject.FindWithTag("SpaceshipPlayer").transform;
     }
 
     void Update()
@@ -33,14 +25,14 @@ public class DynamicDistanceWorldText : MonoBehaviour
 
     void RotateTowardsTarget()
     {
-        transform.LookAt(target);
+        transform.LookAt(PlayerReferenceTracker.Instance.globalPlayerReference);
         transform.Rotate(transform.up, 180.0f);
         transform.Rotate(0, 0, -transform.rotation.eulerAngles.z);
     }
 
     void ComputeDistance()
     {
-        distance = Vector3.Distance(this.transform.position, target.position);
+        distance = Vector3.Distance(this.transform.position, PlayerReferenceTracker.Instance.globalPlayerReference.position);
     }
 
     void UpdateText()

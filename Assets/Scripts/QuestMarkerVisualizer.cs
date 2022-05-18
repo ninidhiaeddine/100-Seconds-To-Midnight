@@ -10,7 +10,6 @@ public class QuestMarkerVisualizer : MonoBehaviour
     public bool visualizeMarkersOneAtATime = true;
 
     // helpers:
-    private int index;
     private GameObject currentMarker;
 
     void Start()
@@ -21,9 +20,12 @@ public class QuestMarkerVisualizer : MonoBehaviour
 
     private Vector3 GetMarkerNextPosition()
     {
-        Vector3 destination = QuestManager.Instance.currentActiveQuest.tasks[index].destination;
-        index++;
-        return destination;
+        for (int i = 0; i < QuestManager.Instance.currentActiveQuest.tasks.Length; i++)
+        {
+            if (!QuestManager.Instance.currentActiveQuest.tasks[i].completed)
+                return QuestManager.Instance.currentActiveQuest.tasks[i].destination;
+        }
+        throw new System.Exception();
     }
 
     private void PlaceMarker()
@@ -50,7 +52,7 @@ public class QuestMarkerVisualizer : MonoBehaviour
         PlaceMarker();
     }
 
-    private IEnumerator PlaceMarkerAfterDelay(float delay = 0.5f)
+    private IEnumerator PlaceMarkerAfterDelay(float delay = 0.2f)
     {
         yield return new WaitForSeconds(delay);
         PlaceMarker();

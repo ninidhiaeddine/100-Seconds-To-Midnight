@@ -72,7 +72,6 @@ public class QuestsUIVisualizer : MonoBehaviour
 
     private void QuestChangedEventHandler()
     {
-        Debug.Log("Handler Called");
         StartCoroutine(PopulateUIAfterDelay());
     }
 
