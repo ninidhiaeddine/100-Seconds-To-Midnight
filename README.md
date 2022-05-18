@@ -12,11 +12,13 @@ The Milky-Way and Andromeda collision is underway in a few decades, which will c
 Unity 2020.3.26f1 (64-bit)
 
 # Authors
-* Dhia Eddine Nini
-* Layal Al Challah
+* [Dhia Eddine Nini](https://github.com/ninidhiaeddine/) <b>(Programming & Storytelling)</b>
+* Layal Al Challah <b>(Dialogues Writing)</b>
 
 # Credits
 ## Assets
+### Characters & Animations
+* [Mixamo](https://www.mixamo.com/)
 ### Spaceship
 * [LOWPOLY - Spaceship](https://assetstore.unity.com/packages/3d/environments/sci-fi/lowpoly-spaceship-183012)
 ### Environment
@@ -26,7 +28,28 @@ Unity 2020.3.26f1 (64-bit)
 * [LowPoly Water](https://assetstore.unity.com/packages/tools/particles-effects/lowpoly-water-107563)
 * [Low-Poly Simple Nature Pack](https://assetstore.unity.com/packages/3d/environments/landscapes/low-poly-simple-nature-pack-162153)
 * [Low Poly Pack](https://assetstore.unity.com/packages/3d/environments/low-poly-pack-94605)
+### Skyboxes
+* [Deep Space Skybox Pack](https://assetstore.unity.com/packages/2d/textures-materials/deep-space-skybox-pack-11056)
+* [SpaceSkies Free](https://assetstore.unity.com/packages/2d/textures-materials/sky/spaceskies-free-80503)
 
+## SFX
+### Background Songs
+* Sofiane Pamart - Carthage
+* Sofiane Pamart - Seoul
+* Cemeteries - What Did You See
+* Low Hum - Comatose
+* Chelou - Out Of Sight
+* Space Song - Beach House
+* Still Corners - The Trip
+* Twin Cabins - Swing Lynn
+### Text-To-Speech AI
+* Free version of [Typecast](https://typecast.ai/)
 
-## Sounds
-Nothing yet...
+# Limitations (Known Issues & Bugs)
+* Turning off Post-Processing preference on settings does not change anything
+* FPS is relatively low
+* Difficult Spaceship controls
+* Difficult Character movement
+
+# Fun facts about this project
+* This project was designed and programmed entirely in 3 days.
