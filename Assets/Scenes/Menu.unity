@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0891322, g: 0.10690444, b: 0.09042931, a: 1}
+  m_IndirectSpecularColor: {r: 0.13247478, g: 0.1616311, b: 0.13856313, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -429,8 +429,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 633, y: -83.1}
-  m_SizeDelta: {x: 1266, y: 166.2}
+  m_AnchoredPosition: {x: 910, y: -100.4375}
+  m_SizeDelta: {x: 1820, y: 200.875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &469789525
 MonoBehaviour:
@@ -743,8 +743,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 633, y: -385.59998}
-  m_SizeDelta: {x: 1266, y: 171.2}
+  m_AnchoredPosition: {x: 910, y: -9.625}
+  m_SizeDelta: {x: 1820, y: 205.875}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &861249932
 MonoBehaviour:
@@ -1011,8 +1011,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 683, y: -479.59998}
-  m_SizeDelta: {x: 1266, y: 556.8}
+  m_AnchoredPosition: {x: 960, y: -284.625}
+  m_SizeDelta: {x: 1820, y: 215.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &947845296
 MonoBehaviour:
@@ -1032,7 +1032,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 10
+  m_Spacing: -150
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -1207,7 +1207,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: -150
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -1257,8 +1257,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 633, y: -236.79999}
-  m_SizeDelta: {x: 1266, y: 121.2}
+  m_AnchoredPosition: {x: 910, y: -128.8125}
+  m_SizeDelta: {x: 1820, y: 155.875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1049526149
 MonoBehaviour:
@@ -1423,8 +1423,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 633, y: -326.47113}
-  m_SizeDelta: {x: 1066, y: 81.42016}
+  m_AnchoredPosition: {x: 910, y: -478.5}
+  m_SizeDelta: {x: 1620, y: 285.75}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1206893570
 MonoBehaviour:
@@ -1697,8 +1697,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 683, y: -554.0543}
-  m_SizeDelta: {x: 1266, y: 407.8913}
+  m_AnchoredPosition: {x: 960, y: -687.875}
+  m_SizeDelta: {x: 1820, y: 764.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1479196075
 MonoBehaviour:
@@ -1718,7 +1718,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 0
+  m_Spacing: -150
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -1861,8 +1861,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 633, y: -38.733864}
-  m_SizeDelta: {x: 1066, y: 77.46773}
+  m_AnchoredPosition: {x: 910, y: -140.375}
+  m_SizeDelta: {x: 1620, y: 280.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1537067114
 MonoBehaviour:
@@ -2279,8 +2279,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 633, y: -201.96942}
-  m_SizeDelta: {x: 1066, y: 249.0034}
+  m_AnchoredPosition: {x: 910, y: -379.625}
+  m_SizeDelta: {x: 1620, y: 497.75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1891429528
 MonoBehaviour:
@@ -2328,7 +2328,7 @@ MonoBehaviour:
     AI: Typecast
 
     - Background Audios, SFX, Assets are credited in details on
-    my Github repo <size=30> (www.github.com/ninidhiaeddine/100-Seconds-To-Midnight.git)</size>'
+    my Github repo <size=25> (www.github.com/ninidhiaeddine/100-Seconds-To-Midnight.git)</size>'
 --- !u!222 &1891429529
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2373,8 +2373,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 633, y: -341.5}
-  m_SizeDelta: {x: 1266, y: 68.2}
+  m_AnchoredPosition: {x: 910, y: -108.1875}
+  m_SizeDelta: {x: 1820, y: 102.875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2082818480
 MonoBehaviour:
