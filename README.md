@@ -13,7 +13,7 @@ Unity 2020.3.26f1 (64-bit)
 
 # Authors
 * [Dhia Eddine Nini](https://github.com/ninidhiaeddine/) <b>(Programming & Storytelling)</b>
-* Layal Al Challah <b>(Dialogues Writing)</b>
+* Layal Al Challah <b>(Dialogues Writing & Storytelling)</b>
 
 # Credits
 ## Assets
@@ -33,7 +33,7 @@ Unity 2020.3.26f1 (64-bit)
 * [SpaceSkies Free](https://assetstore.unity.com/packages/2d/textures-materials/sky/spaceskies-free-80503)
 
 ## SFX
-### Background Songs
+### Soundtracks
 * Sofiane Pamart - Carthage
 * Sofiane Pamart - Seoul
 * Cemeteries - What Did You See
